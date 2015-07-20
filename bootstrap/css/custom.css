@@ -1,1 +1,10 @@
 /* this is a custom CSS stylesheet */
+
+p {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: justify;
+}
+
+.blue-font {
+
+}
