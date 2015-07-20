@@ -1,10 +1,32 @@
 /* this is a custom CSS stylesheet */
 
-p {
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	text-align: justify;
+/* These two overrides are needed because bootstrap adds 
+   some pesky l-r margins to navbar elements*/
+.navbar-collapse {
+	padding-left: 0;
+	padding-right: 0;
 }
 
-.blue-font {
+.navbar-nav li a {
+	margin-left: 0;
+	margin-right: 0;
+}
 
+* {
+	color: #2c3e50;
+}
+
+.navbar-default .navbar-nav .active a {
+	color: #2c3e50;
+}
+
+.navbar-default .navbar-nav li a {
+	color: #2c3e50;
+}
+
+/* Overriding the paragraph font */
+p {
+	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 15px;
+	line-height: 1.428571429;
 }
