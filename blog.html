@@ -1,70 +1,25 @@
-<!doctype html>
-<html>
-<head>
-	<meta name="description" content="This is the personal website of Gokul Raghuraman. I am a software/web developer with a focus in machine learning, computer graphics, and computer vision.">
-	<meta name="author" content="Gokul Raghuraman">
-	<meta name="keywords" content="Developer, Software, Apps, Graphics, Blog">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Gokul Raghuraman</title>
+---
+layout: default
+title: Gokul Raghuraman's Blog
+full_posts: 6
+---
 
-	<!-- bootstrap stylesheet -->
-	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<!-- font-awesome (for social icons) -->
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-	<!-- my custom stylesheets -->
-	<!-- <link href="bootstrap/css/custom.css" rel="stylesheet"> -->
-	
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-<body>
-	<nav class="navbar navbar-default">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-
-			<!-- Collect the nav links and other content for toggling -->
-			<div class="collapse navbar-collapse" id="navbar-collapse-1">
-				<!-- main navbar for my sections -->
-				<ul class="nav navbar-nav">
-					<li><a href="./index.html">Home</a></li>
-					<li><a href="./portfolio.html">Portfolio</a></li>
-					<li><a href="./vita.html">Vita</a></li>
-					<li class="active"><a href="#">Blog</a></li>
-				</ul>
-				<!-- right nav bar for contact / social icons -->
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="https://www.linkedin.com/in/gokulraghuraman" target="_blank"><i class="fa fa-linkedin fa-lg"></i><span class="sr-only">LinkedIn Profile</span></a></li>
-					<li><a href="https://github.com/gokul-raghuraman" target="_blank"><i class="fa fa-github fa-lg"></i><span class="sr-only">GitHub Profile</span></a></li>
-					<li><a href="#" target="_blank"><i class="fa fa-envelope fa-lg"></i><span class="sr-only">Contact via Email</span></a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<div class="container">
-		<p class="lead">Coming Soon!</p>
-		
-	</div>
-
-	
-
-	<!--jQuery (required for bootstrap's javascript plugins) and bootstrap's javascript-->
-	<script src="http://code.jquery.com/jquery-latest.min.js"> </script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<script
-
-</body>
-</html>
+{% for post in site.posts %}
+  {% if forloop.index < page.full_posts %}
+  <div class='post'>
+    <span class='date'>{{post.date | date_to_string}}</span>
+    <h1><a href='{{post.url}}'>{{post.title}}</a></h1>
+    <div class='body'>{{post.content}}</div>
+  </div>
+  {% else %}
+    {% if forloop.index == page.full_posts %}
+    <h3>Older Posts</h3>
+    <table class='post-list'>
+    {% endif %}
+    <tr>
+      <th><a href='{{ post.url }}'>{{ post.title }}</a></th>
+      <td>{{ post.date | date_to_string }}</td>
+    </tr>
+  {% endif %}
+{% endfor %}
+</table>
