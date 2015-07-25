@@ -1,32 +1,42 @@
-/* this is a custom CSS stylesheet */
+.navbar-custom-1 {
+	background-color: #226CE0;
+	width: 80%;
+	margin: auto;
+	margin-top: 1%;
+	border-radius: 0;
+}
 
-/* These two overrides are needed because bootstrap adds 
-   some pesky l-r margins to navbar elements*/
+.navbar-default .navbar-nav li a {
+	color: white;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 16px;
+}
+
+.navbar-default .navbar-nav li a:hover {
+	background-color: white;
+	color: #226CE0;
+}
+
+.navbar-default .navbar-nav .active a {
+	color: white;
+	background-color: #226CE0;
+}
+
+.navbar-default .navbar-nav .active a:hover {
+	background-color: white;
+	color: #226CE0;
+}
+
 .navbar-collapse {
 	padding-left: 0;
 	padding-right: 0;
 }
 
-.navbar-nav li a {
-	margin-left: 0;
+.navbar-right {
 	margin-right: 0;
 }
 
-* {
-	color: #2c3e50;
-}
-
-.navbar-default .navbar-nav .active a {
-	color: #2c3e50;
-}
-
-.navbar-default .navbar-nav li a {
-	color: #2c3e50;
-}
-
-/* Overriding the paragraph font */
-p {
-	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 15px;
-	line-height: 1.428571429;
+.nav .navbar-nav li a {
+	margin-left: 5px;
+	margin-right: 5px;
 }
