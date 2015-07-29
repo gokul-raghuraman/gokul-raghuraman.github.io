@@ -2,6 +2,12 @@ body {
 	font-size: 14px;
 }
 
+/* For no shadow on navbar */
+.navbar {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
 .navbar-custom-1 {
 	background-color: #226CE0;
 	width: 80%;
@@ -12,23 +18,24 @@ body {
 
 .navbar-default .navbar-nav li a {
 	color: white;
-	font-family: 'Droid Sans', sans-serif;
 	font-size: 16px;
+	font-weight: 300;
 }
 
 .navbar-default .navbar-nav li a:hover {
-	background-color: white;
-	color: #226CE0;
+	background-color: #134fae;
+	color: white;
 }
 
 .navbar-default .navbar-nav .active a {
-	color: #226CE0;
-	background-color: white;
+	/*color: #226CE0;*/
+	color: white;
+	background-color: #134fae;
 }
 
 .navbar-default .navbar-nav .active a:hover {
-	background-color: white;
-	color: #226CE0;
+	background-color: #134fae;
+	color: white;
 }
 
 .navbar-collapse {
@@ -43,6 +50,17 @@ body {
 .nav .navbar-nav li a {
 	margin-left: 5px;
 	margin-right: 5px;
+}
+
+.frame {
+	display: inline-block;
+	margin: 50px;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* For blog page */
@@ -81,4 +99,14 @@ ul {
 
 .bold {
 	font-weight: bold;
+}
+
+/* site header */
+.site-header {
+	border-bottom: 0;
+}
+
+.wrapper {
+	padding-left: 10px;
+	padding-right: 10px;
 }
